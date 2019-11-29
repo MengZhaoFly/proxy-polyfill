@@ -1,3 +1,20 @@
+## Proxy 的 pollyfill
+
+Chrome 实现版：
+
+相比 原生 Proxy 而言，还是有很多功能缺失，
+比如：
+- 后添加的属性
+- 数组
+
+等等，这些都是 Proxy 亮眼的地方，
+总之 我说服不了自己这是个 Proxy 的 pollyfill
+
+如果 只关注对象的劫持，可以直接看：`myProxy.js`
+
+原文：
+
+
 <img src="https://api.travis-ci.org/GoogleChrome/proxy-polyfill.svg?branch=master" />
 
 This is a polyfill for the `Proxy` object, part of ES6.

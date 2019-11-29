@@ -14,7 +14,8 @@
  * the License.
  */
 
-module.exports = function proxyPolyfill() {
+// module.exports = function proxyPolyfill() {
+function proxyPolyfill() {
   let lastRevokeFn = null;
   let ProxyPolyfill;
 
@@ -32,6 +33,7 @@ module.exports = function proxyPolyfill() {
    * @param {{apply, construct, get, set}} handler
    */
   ProxyPolyfill = function(target, handler) {
+    debugger;
     if (!isObject(target) || !isObject(handler)) {
       throw new TypeError('Cannot create proxy with a non-object as target or handler');
     }
@@ -168,3 +170,5 @@ module.exports = function proxyPolyfill() {
 
   return ProxyPolyfill;
 }
+
+window.MyProxy = proxyPolyfill();
